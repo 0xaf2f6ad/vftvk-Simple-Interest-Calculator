@@ -1,16 +1,43 @@
-<html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title></title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="parent-container">
+      <form class="card" action="#" id="compute-form">
+        <h1 class="card-heading">Simple Interest Calculator</h1>
+        <fieldset class="fieldset-grid">
+          <div class="left-column">
+            <p>Amount</p>
+            <p>Rate</p>
+            <p>No. of Years</p>
+            <button class="compute-btn" type="submit">Compute Interest</button>
+          </div>
+          <div class="right-column">
+            <input type="number" id="principal" required />
+            <div class="row">
+              <input type="range" id="rate" min="1" max="50" step="0.1" required />
+              <p class="selected-range" id="rate-percentage">25%</p>
+            </div>
+            <select required id="years" name="years"></select>
+          </div>
+        </fieldset>
+        <div class="result-info-container">
+          <p id="r1-txt">If you deposit 1000000</p>
+          <p id="r2-txt">at an interest rate of 3.5%</p>
+          <p id="r3-txt">You will receive an amount of 175000</p>
+          <p id="r4-txt">in the year 2025</p>
+        </div>
+        <div class="full-width">
+          <p class="copyright-text">&copy; Everyone Can Get Rich</p>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
