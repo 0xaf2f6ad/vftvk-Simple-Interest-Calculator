@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title></title>
+    <title>Web App – Simple Interest Calculator</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -14,11 +14,11 @@
         <h1 class="card-heading">Simple Interest Calculator</h1>
         <fieldset class="fieldset-grid">
           <div class="left-column">
-            <p>Amount</p>
-            <p>Rate</p>
-            <p>No. of Years</p>
-            <button class="compute-btn" type="submit">Compute Interest</button>
+            <p class="amount-label">Amount</p>
+            <p>Interest Rate</p>
+            <p class="no-of-yrs-label">No. of Years</p>
           </div>
+          <button class="compute-btn" type="submit">Compute Interest</button>
           <div class="right-column">
             <input type="number" id="principal" required />
             <div class="row">
@@ -29,10 +29,22 @@
           </div>
         </fieldset>
         <div class="result-info-container">
-          <p id="r1-txt">If you deposit 1000000</p>
-          <p id="r2-txt">at an interest rate of 3.5%</p>
-          <p id="r3-txt">You will receive an amount of 175000</p>
-          <p id="r4-txt">in the year 2025</p>
+          <p class="row">
+            If you deposit
+            <span id="r1-txt">1000000</span>
+          </p>
+          <p class="row">
+            at an interest rate of
+            <span id="r1-txt">3.5%</span>
+          </p>
+          <p class="row">
+            You will receive an amount of
+            <span id="r1-txt">175000</span>
+          </p>
+          <p class="row">
+            in the year
+            <span id="r1-txt">2025</span>
+          </p>
         </div>
         <div class="full-width">
           <p class="copyright-text">&copy; Everyone Can Get Rich</p>

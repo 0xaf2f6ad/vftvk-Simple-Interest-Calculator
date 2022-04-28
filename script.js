@@ -22,13 +22,24 @@ const computeInterest = () => {
   const currentYear = new Date().getFullYear();
   const totalYears = currentYear + years;
 
+  if (principal === 0) {
+    alert("Enter a number greater than 0");
+    amountField.focus();
+    return;
+  }
+  if (principal < 0) {
+    alert("Enter a number positive number");
+    amountField.focus();
+    return;
+  }
+
   const interest = principal * (rate / 100) * years;
 
   resultTxts.container.style.display = "block";
-  resultTxts.a.innerHTML = `If you deposit ${principal}`;
-  resultTxts.b.innerHTML = `at an interest rate of ${rate}%`;
-  resultTxts.c.innerHTML = `You will receive an amount of ${interest}`;
-  resultTxts.d.innerHTML = `in the year ${totalYears}`;
+  resultTxts.a.innerHTML = `${principal}`;
+  resultTxts.b.innerHTML = `${rate}%`;
+  resultTxts.c.innerHTML = `${interest}`;
+  resultTxts.d.innerHTML = `${totalYears}`;
 };
 
 const addYearsToYearsSelect = (years) => {
